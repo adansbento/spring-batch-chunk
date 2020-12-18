@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  db:
+    image: mysql
+    container_name: migracao_dados
+    environment:
+      MYSQL_DATABASE: migracao_dados
+      MYSQL_USER: migracao_dados
+      MYSQL_PASSWORD: migracao_dados
+      MYSQL_ROOT_PASSWORD: migracao_dados
+    ports:
+      - "3307:3306"
+    volumes:
+      - migracao_dados_data:/var/lib/mysql
+
+volumes:
+  migracao_dados_data:

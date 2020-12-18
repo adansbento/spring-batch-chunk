@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  db:
+    image: mysql
+    container_name: spring_batch
+    environment:
+      MYSQL_DATABASE: spring_batch
+      MYSQL_USER: spring_batch
+      MYSQL_PASSWORD: spring_batch
+      MYSQL_ROOT_PASSWORD: spring_batch
+    ports:
+      - "3306:3306"
+    volumes:
+      - spring_batch_data:/var/lib/mysql
+
+volumes:
+  spring_batch_data:
